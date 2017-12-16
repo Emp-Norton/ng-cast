@@ -4,8 +4,8 @@ angular.module('video-player')
   bindings: {
     video: '<'
   },
-  controller: function($scope) {
-    this.formUrl = function() {
+  controller: function() {
+    this.formUrl = function(video) {
       return 'https://www.youtube.com/embed/' + this.video.id.videoId;
     };
   },

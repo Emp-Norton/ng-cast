@@ -7,8 +7,8 @@ angular.module('video-player')
 
   controller: function ($scope) {
     this.clickHandler = (video) => {
-      $scope.$parent.x = video;
-      console.log($scope);
+      $scope.y = video;
+    console.log($scope)
     };
   },
 

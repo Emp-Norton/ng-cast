@@ -5,7 +5,8 @@ angular.module('video-player')
     videos: '<'
   },
 
-  controller: function () {
+  controller: function ($scope) {
+    $scope.x = 1;
   },
 
 
