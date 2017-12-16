@@ -4,9 +4,10 @@ angular.module('video-player')
   bindings: {
     video: '<'
   },
-  controller: function() {
+  controller: function($sce) {
     this.formUrl = function(video) {
-      return 'https://www.youtube.com/embed/' + this.video.id.videoId;
+      var url = 'https://www.youtube.com/embed/' + this.video.id.videoId;
+      return $sce.trustAsResourceUrl(url);
     };
   },
 
