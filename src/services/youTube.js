@@ -1,4 +1,4 @@
-angular.module('video-player')
+angular.module('video-player', []) // named and listed empty array as depende
 .service('youTube', function($http) {
   this.search = function(query, callback) {
     return $http({
@@ -9,7 +9,7 @@ angular.module('video-player')
         part: 'snippet',
         q: query,
         type: 'video',
-        key: YOUTUBE_API_KEY
+        key: window.YOUTUBE_API_KEY
       },
     }).then(function (response) {
       callback(response.data.items);
